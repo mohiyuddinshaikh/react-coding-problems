@@ -1,7 +1,12 @@
 import "./App.css";
+import ProductDisplay from "./components/ProductDisplay";
 
 function App() {
-  return <div className="">Solution goes here</div>;
+  return (
+    <div className="">
+      <ProductDisplay />
+    </div>
+  );
 }
 
 export default App;
