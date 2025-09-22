@@ -1,7 +1,18 @@
+import { useState } from "react";
 import "./App.css";
+import Card from "./components/Card";
 
 function App() {
-  return <div className="">Solution goes here</div>;
+  const [showCard, setShowCard] = useState(false);
+
+  const toggleCard = () => setShowCard((prev) => !prev);
+
+  return (
+    <div className="flex flex-col gap-4">
+      <button onClick={toggleCard}>Toggle Card</button>
+      {showCard ? <Card /> : null}
+    </div>
+  );
 }
 
 export default App;
